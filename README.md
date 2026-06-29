@@ -1,24 +1,20 @@
-# Personal Portfolio Website
+# manatunga.github.io
 
 This repository contains the source code and assets for my personal portfolio website.
 
----
-
-### ✨ Live Demo
-
+#### **Live Demo:**
 Check out the live version of the website here:
-👉 **[View My Live Portfolio](https://manatunga.github.io)**
+👉 ~**[View My Live Portfolio](https://manatunga.github.io)**~ (currently unavailable)
+<br>
+<br>
 
----
-
-### 🛠️ Tech Stack
+## 🛠️ Tech Stack
 
 * **Frontend:** HTML5, CSS3, JavaScript
 * **Hosting/Deployment:** GitHub Pages
+<br>
 
----
-
-### 💻 Local Setup & Development
+## 💻 Local Setup & Development
 
 To view or modify the code locally:
 
@@ -36,13 +32,12 @@ To view or modify the code locally:
 
 3. Run locally:
 
-    Simply open the `index.html` file in your browser.
-    *Alternative*: Use the **Live Server** extension in VS Code for live-reloading.
+    Simply open the `index.html` file in your browser. <br>
+    ***Alternative***: Use the **Live Server** extension in VS Code for live-reloading.
+<br>
 
----
+## 📜 License
 
-### 📜 License
-
-Source code is licensed under the [MIT license](https://opensource.org/license/mit)
+Source code is licensed under the [MIT license](https://opensource.org/license/mit).
 
 Contents of this site are Copyright (c) 2026 Janitha Manatunga. All rights reserved.
