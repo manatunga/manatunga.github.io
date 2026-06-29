@@ -1,0 +1,56 @@
+/* Global Styles */
+html body {
+    background-color: rgba(11, 11, 16, 0.9);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 20px 72px;
+}
+
+.logo {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    white-space: nowrap;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 3rem);
+    list-style: none;
+}
+
+.nav-links li a {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 14px;
+    color: white;
+    padding: 5px 0;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
