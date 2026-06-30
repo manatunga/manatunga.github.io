@@ -18,6 +18,16 @@ html body {
 
 
 /* Loading Transitions */
+@keyframes slideFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes slideFromLeft {
     from {
@@ -70,7 +80,7 @@ html body {
     box-sizing: border-box;
     background-color: var(--primary-background);
     overflow: hidden;
-    box-shadow: inset 0 -5px 9px rgba(0, 0, 0, 0.3);
+    border-bottom: 2px solid rgba(109, 109, 108, 0.1);
 }
 
 .hero-left {
@@ -79,17 +89,17 @@ html body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    opacity: 0;
-    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .hero-left hr {
     width: 120px;
-    height: 2px;
+    height: 5px;
     background-color: var(--primary-color);
     margin-left: 0;
     margin-bottom: 30px;
+
+    opacity: 0;
+    animation: slideFromLeft 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .hero-left .greeting {
@@ -98,6 +108,9 @@ html body {
     color: rgb(157, 157, 157);
     margin-bottom: 2px;
     letter-spacing: 2px;
+    
+    opacity: 0;
+    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .hero-left h1 {
@@ -107,6 +120,9 @@ html body {
     font-size: 3.5rem;
     margin-top: 10px;
     margin-bottom: 0;
+    
+    opacity: 0;
+    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .hero-left .subtitle {
@@ -114,16 +130,28 @@ html body {
     font-family: monospace, sans-serif;
     font-size: 24px;
     color: var(--primary-color);
-    margin-bottom: 120px;
+    margin-bottom: 100px;
     letter-spacing: 2px;
     line-height: 36px;
+    
+    opacity: 0;
+    animation: slideFromTop 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 200px;
+    gap: 50px;
+
+    opacity: 0;
+    animation: slideFromRight 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .call-to-action {
     position: relative;
     overflow: hidden;
     width: fit-content;
-    margin: 0 300px;
     padding: 26px 48px;
 
     text-decoration: none;
@@ -214,12 +242,23 @@ html body {
     transition: transform 0.2 ease;
 }
 
-.social-icons img:hover {
-    transform: translateY(-3px);
-}
-
 
 
 /*----------------------------------*/
 /* ----------ABOUT SECTION--------- */
 /*----------------------------------*/
+.about {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+    to bottom, 
+    rgba(27, 27, 26, 0.8) 0%, 
+    #121211 150px, 
+    #121211 100%);
+
+    padding: 100px 10%;
+}

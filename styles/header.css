@@ -35,9 +35,9 @@ nav {
     z-index: 1000;
 }
 
-.navbar.scrolled {
+nav.scrolled {
     background-color: rgb(26, 26, 26);
-    padding: 12px;
+    padding: 12px 8%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
