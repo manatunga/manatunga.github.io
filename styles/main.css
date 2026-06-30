@@ -15,6 +15,44 @@ html body {
 /*----------------------------------*/
 /* ----------HERO SECTION---------- */
 /*----------------------------------*/
+
+
+/* Loading Transitions */
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 .hero {
     position: relative;
     min-height: 100vh;
@@ -41,6 +79,9 @@ html body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    opacity: 0;
+    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .hero-left hr {
@@ -131,7 +172,9 @@ html body {
 .hero-right img {
     max-height: 92vh;
     object-fit: contain;
-    opacity: 100%;
+
+    opacity: 0;
+    animation: slideFromRight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 
@@ -148,6 +191,9 @@ html body {
 
     padding-bottom: 30px;
     padding-right: 30px;
+
+    opacity: 0;
+    animation: slideFromBottom 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .lets-connect {
@@ -171,6 +217,7 @@ html body {
 .social-icons img:hover {
     transform: translateY(-3px);
 }
+
 
 
 /*----------------------------------*/
