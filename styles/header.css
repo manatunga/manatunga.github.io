@@ -46,7 +46,7 @@ nav {
     white-space: nowrap;
     text-decoration: none;
     font-family: monospace;
-    font-size: clamp(0.9rem, 0.6rem + 1vw, 1rem);
+    font-size: clamp(0.9rem, 0.6rem + 1vw, 1.2rem);
     color: var(--primary-color);
     padding: 5px 0;
 }
