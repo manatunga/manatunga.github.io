@@ -17,7 +17,7 @@ html body {
 /*----------------------------------*/
 
 
-/* Loading Transitions */
+/* Keyframes for slide animations */
 @keyframes slideFromTop {
     from {
         opacity: 0;
@@ -62,7 +62,7 @@ html body {
     }
 }
 
-
+/* Hero Section Styles */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -83,6 +83,7 @@ html body {
     border-bottom: 2px solid rgba(109, 109, 108, 0.1);
 }
 
+/* Hero Left Section Styles */
 .hero-left {
     position: relative;
     z-index: 5;
@@ -125,23 +126,38 @@ html body {
     animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
-.hero-left .subtitle {
-    max-width: 1000px;
-    font-family: monospace, sans-serif;
+.typerwriter-container {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
     font-size: 24px;
     color: var(--primary-color);
-    margin-bottom: 100px;
-    letter-spacing: 2px;
-    line-height: 36px;
-    
-    opacity: 0;
-    animation: slideFromTop 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    line-height: 1.6;
+    padding: 20px 0;
+    margin-bottom: 30px;
 }
 
+.typewriter-wrap {
+    display: inline;
+}
+
+.cursor {
+    font-weight: bold;
+    color: rgb(141, 255, 255);
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+}
+
+/* Call to Action Styles */
 .cta-container {
     display: flex;
     justify-content: space-between;
-    margin: 0 200px;
+    margin: 30px 200px;
     gap: 50px;
 
     opacity: 0;
@@ -189,6 +205,7 @@ html body {
     border-color: transparent;
 }
 
+/* Hero Right Section Styles */
 .hero-right {
     position: relative;
     z-index: 1;

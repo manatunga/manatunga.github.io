@@ -2,7 +2,7 @@
     --primary-color: white;
 }
 
-/* Loading Transitions */
+/* Keyframes for slide animations */
 @keyframes slideFromTop {
     from {
         opacity: 0;
@@ -14,7 +14,7 @@
     }
 }
 
-
+/* Nav Bar Styles */
 nav {
     position: fixed;
     top: 0;
