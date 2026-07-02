@@ -1,0 +1,83 @@
+:root {
+    --primary-color: white;
+}
+
+/* Keyframes for slide animations */
+@keyframes slideFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Nav Bar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    box-sizing: border-box;
+
+     opacity: 0;
+    animation: slideFromTop 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+
+    background-color: transparent;
+    transition: background-color 0.4s ease, padding 0.4s ease;
+    z-index: 1000;
+}
+
+nav.scrolled {
+    background-color: rgb(26, 26, 26);
+    padding: 12px 8%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    white-space: nowrap;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links li a {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: clamp(0.9rem, 0.6rem + 1vw, 1.2rem);
+    color: var(--primary-color);
+    padding: 5px 0;
+}
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}

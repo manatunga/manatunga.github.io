@@ -1,0 +1,129 @@
+/* Variables */
+:root {
+    --brand-color: rgb(141, 255, 255);
+    --primary-background: rgba(27, 27, 26, 0.6);
+}
+
+
+/* ----Global Styles---- */
+html body {
+    background-color: var(--primary-background);
+    margin: 0;
+    padding: 100px;
+    color: white;
+    font: sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Keyframe styles for load transition */
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.error-404-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    opacity: 0;
+    animation: slideFromBottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.error-image {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 180%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.error-code {
+    position: relative;
+    top: -90px;
+    margin: 0;
+    text-align: center;
+    font-size: 200px;
+
+    opacity: 0;
+    animation: slideFromBottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.error-title {
+    position: relative;
+    top: -90px;
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+
+    opacity: 0;
+    animation: slideFromBottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.error-subtext {
+    position: relative;
+    top: -80px;
+    text-align: center;
+    font-size: 22px;
+
+    opacity: 0;
+    animation: slideFromBottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: center;
+
+    opacity: 0;
+    animation: slideFromBottom 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.cta-button {
+    position: relative;
+    top: -30px;
+    overflow: hidden;
+    width: fit-content;
+    padding: 26px 48px;
+
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(70, 255, 255);
+    border-radius: 100px;
+    color: white;
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: -0 0 5px rgb(70, 255, 255);
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0; height: 100%;
+    background: rgb(70, 255, 255);
+    z-index: -1;
+    transition: width 0.3s ease; 
+}
+
+.cta-button:hover::before {
+    width: 100%;
+}
