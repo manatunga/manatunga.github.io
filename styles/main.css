@@ -1,0 +1,281 @@
+/* Variables */
+:root {
+    --primary-color: white;
+    --primary-background: rgba(27, 27, 26, 0.8);
+}
+
+
+/* ----Global Styles---- */
+html body {
+    background-color: var(--primary-background);
+    margin: 0;
+    padding: 0;
+}
+
+/*----------------------------------*/
+/* ----------HERO SECTION---------- */
+/*----------------------------------*/
+
+
+/* Keyframes for slide animations */
+@keyframes slideFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+
+
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1fr);
+    width: 100%;
+    gap: 16px;
+    align-items: center;
+
+    padding-top: 100px;
+    padding-left: 8%;
+    box-sizing: border-box;
+    background-color: var(--primary-background);
+    overflow: hidden;
+    border-bottom: 2px solid rgba(109, 109, 108, 0.1);
+}
+
+/* Hero Left Section Styles */
+.hero-left {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-left hr {
+    width: 120px;
+    height: 5px;
+    background-color: var(--primary-color);
+    margin-left: 0;
+    margin-bottom: 30px;
+
+    opacity: 0;
+    animation: slideFromLeft 0.6s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.hero-left .greeting {
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    color: rgb(157, 157, 157);
+    margin-bottom: 2px;
+    letter-spacing: 2px;
+    
+    opacity: 0;
+    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.hero-left h1 {
+    font-family: Poppins, sans-serif;
+    font-size: 80px;
+    color: rgb(141, 255, 255);
+    font-size: 3.5rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    
+    opacity: 0;
+    animation: slideFromLeft 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.typerwriter-container {
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 24px;
+    color: var(--primary-color);
+    line-height: 1.6;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.typewriter-wrap {
+    display: inline;
+}
+
+.cursor {
+    font-weight: bold;
+    color: rgb(141, 255, 255);
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+}
+
+/* Call to Action Styles */
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 200px;
+    gap: 50px;
+
+    opacity: 0;
+    animation: slideFromRight 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.call-to-action {
+    position: relative;
+    overflow: hidden;
+    width: fit-content;
+    padding: 26px 48px;
+
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(141, 255, 255);
+    border-radius: 100px;
+    color: var(--primary-color);
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    box-shadow: -0 0 5px rgb(141, 255, 255);
+    z-index: 1;
+    transition: transform 0.2s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.call-to-action::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 0; height: 100%;
+    background: rgb(141, 255, 255);
+    z-index: -1;
+    transition: width 0.3s ease; 
+}
+
+.call-to-action:hover::before {
+    width: 100%;
+}
+
+.call-to-action:hover {
+    transform: scale(1.05);
+    background-color: rgb(141, 255, 255);
+    color: rgb(18, 18, 18);
+    border-color: transparent;
+}
+
+/* Hero Right Section Styles */
+.hero-right {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-right img {
+    max-height: 92vh;
+    object-fit: contain;
+
+    opacity: 0;
+    animation: slideFromRight 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+
+.bottom-right-socials {
+    position: absolute;
+    bottom: 40px;
+    right: 8%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 18px;
+    z-index: 10;
+
+    padding-bottom: 30px;
+    padding-right: 30px;
+
+    opacity: 0;
+    animation: slideFromBottom 2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.lets-connect {
+    font-family: Inter, sans-serif;
+    font-size: 18px;
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+}
+
+.social-icons img {
+    height: 28px;
+    width: auto;
+    transition: transform 0.2 ease;
+}
+
+
+
+/*----------------------------------*/
+/* ----------ABOUT SECTION--------- */
+/*----------------------------------*/
+.about {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(
+    to bottom, 
+    rgba(27, 27, 26, 0.8) 0%, 
+    #121211 150px, 
+    #121211 100%);
+
+    padding: 100px 10%;
+}
