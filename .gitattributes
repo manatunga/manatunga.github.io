@@ -1,0 +1,16 @@
+# Set default behavour for all text files
+* text = auto  eol = lf
+
+# Declare text and code formats
+*.js        text
+*.css       text
+*.html      text
+*.md        text
+
+# Declare binary assets to prevent Git from corrupting them
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.ico       binary
+*.ttf       binary
+*.pdf       binary
