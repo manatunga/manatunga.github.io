@@ -277,5 +277,74 @@ html body {
     #121211 150px, 
     #121211 100%);
 
-    padding: 100px 10%;
+    padding: 200px 5%;
+
+    color: white;
+    font-family: Inter;
+}
+
+.about-title {
+    font-family: Poppins;
+    font-size: 32px;
+}
+
+.about-stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 40px 8% 80px 8%;
+}
+
+.stat-card {
+    padding: 20px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.stat-number {
+    font-size: 80px;
+    font-family: monospace;
+}
+
+.about-content-container {
+    display: flex;
+    gap: 10%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.about-left {
+    flex: 1;
+}
+
+.tech-stack-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-category {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2px;
+    padding-bottom: 50px;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.tech-item {
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-right {
+    flex: 1;
 }
